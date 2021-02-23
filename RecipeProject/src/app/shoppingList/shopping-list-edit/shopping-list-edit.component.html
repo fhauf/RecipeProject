@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-xs-12">
+        <form>
+            <div class="row">
+                <div class="col-sm-5 form-group">
+                    <label for="name">Name</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        class="form-control"
+                        #recipeNameInput>
+                </div>
+                <!-- <div class="col-sm-2 form-group">
+                    <label for="amount">Amount</label>
+                    <input type="number" id="amount" class="form-control" (input)="setTwoNumberDecimal($event)" min="0" max="10" step="0.25" value="0.00">
+                </div>
+                -->
+                <div class="col-sm-2 form-group">
+                    <label for="amount">Amount</label>
+                    <input 
+                        type="number" 
+                        id="amount" 
+                        class="form-control" 
+                        #recipeAmountInput
+                        min="0" max="10" step="0.25" value="0.00">
+                </div>
+                <div class="col-sm-2 form-group">
+                    <label for="units">Units</label>
+                    <select 
+                        type="text" 
+                        id="units" 
+                        class="form-control" 
+                        size = "1"
+                        #recipeUOMInput>
+                        <option value="item">Item</option>
+                        <option value="tsp">Teaspoon</option>
+                        <option value="tbsp">Tablespoon</option>
+                        <option value="oz">Ounce</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <button class="btn btn-success" type="submit" (click)="onAddItem()">Add</button>
+                    <button class="btn btn-danger" type="button">Delete</button>
+                    <button class="btn btn-primary" type="button">Clear</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
